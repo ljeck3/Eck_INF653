@@ -63,6 +63,19 @@ switch ($action) {
         }
         break;
     //Modify the controller 
+    case "update_course":
+        if ($course_id) {
+            try {
+                update_course($course_id);
+                header("Location: .?action=list_courses");
+                exit();
+            } catch (PDOException $e) {
+                $error = "You cannot update a course if assignments exist in the course.";
+                include('view/error.php');
+                exit();
+            }
+        }
+        break;
     case "update_assignment":
         if ($assignment_id) {
             update_assignment($assignment_id);
