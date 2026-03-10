@@ -1,6 +1,24 @@
 <?php
 require_once('database.php');
 
+//Create the update form
+function update_course($course_id, $course_name) {
+    global $db;
+    $query = 
+    'UPDATE courses
+    SET courseName = :course_name,
+    WHERE course_id = :course_id';
+
+    $statement = $db->prepare($query);
+ 
+     $statement->bindValue(':course_name', $course_name, PDO::STR);
+     $statement->bindValue(':course_id', $course_id, PDO::INT);
+     
+    $statement->execute();
+    $statement->closeCursor();
+}
+
+
 function get_courses()
 {
     global $db;
