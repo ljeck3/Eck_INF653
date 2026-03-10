@@ -62,6 +62,19 @@ switch ($action) {
             exit();
         }
         break;
+    //Modify the controller 
+    case "update_assignment":
+        if ($assignment_id) {
+            update_assignment($assignment_id);
+            header("Location: .?action=list_assignments&course_id=" . $course_id);
+            exit();
+        } else {
+            $error = "Missing or incorrect assignment id.";
+            include('view/error.php');
+            exit();
+        }
+        break;
+    //------------------------------------
     default:
         $courses = get_courses();
         $assignments = get_assignments_by_course($course_id);
