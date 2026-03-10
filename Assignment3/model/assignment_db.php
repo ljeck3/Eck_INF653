@@ -1,7 +1,7 @@
 <?php
 require_once('database.php');
 
-//Assignment Part 1
+//Modify the database file 
 function update_assignment($assignment_id, $description, $course_id) {
     global $db;
     $query = 
