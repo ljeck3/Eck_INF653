@@ -1,6 +1,24 @@
 <?php
 require_once('database.php');
 
+//Assignment Part 1
+function update_assignment($assignment_id, $description, $course_id) {
+    global $db;
+    $query = 
+    'UPDATE assignments
+    SET description = :description,
+        courseID = :courseID
+    WHERE assignment_ID = :assignment_id';
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(':assignment_id', $assignment_id, PDO::PARAM_INT);
+    $statement->bindValue(':courseID', $course_id, PDO::PARAM_INT);
+    $statement->bindValue(':description', $description, PDO::PARAM_STR);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
+
 function get_assignments_by_course($course_id)
 {
     global $db;
