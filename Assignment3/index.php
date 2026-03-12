@@ -71,7 +71,7 @@ switch ($action) {
     case "update_course":
         if ($course_id) {
             try {
-                update_course($course_id);
+                update_course($course_id, $course_name);
                 header("Location: .?action=list_courses");
                 exit();
             } catch (PDOException $e) {

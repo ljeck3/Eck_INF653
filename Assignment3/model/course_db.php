@@ -11,8 +11,8 @@ function update_course($course_id, $course_name) {
 
     $statement = $db->prepare($query);
  
-     $statement->bindValue(':course_name', $course_name, PDO::STR);
-     $statement->bindValue(':course_id', $course_id, PDO::INT);
+     $statement->bindValue(':course_name', $course_name, PDO::PARAM_STR);
+     $statement->bindValue(':course_id', $course_id, PDO::PARAM_INT);
      
     $statement->execute();
     $statement->closeCursor();
