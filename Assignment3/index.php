@@ -75,7 +75,7 @@ switch ($action) {
                 header("Location: .?action=list_courses");
                 exit();
             } catch (PDOException $e) {
-                $error = "You cannot update a course if assignments exist in the course.";
+                $error = "error";
                 include('view/error.php');
                 exit();
             }
@@ -83,7 +83,7 @@ switch ($action) {
         break;
     case "update_assignment":
         if ($assignment_id) {
-            update_assignment($assignment_id);
+            update_assignment($assignment_id, $description, $course_id);
             header("Location: .?action=list_assignments&course_id=" . $course_id);
             exit();
         } else {

@@ -8,7 +8,7 @@ function update_assignment($assignment_id, $description, $course_id) {
     'UPDATE assignments
     SET description = :description,
         courseID = :courseID
-    WHERE assignment_ID = :assignment_id';
+    WHERE id = :assignment_id';
 
     $statement = $db->prepare($query);
     $statement->bindValue(':assignment_id', $assignment_id, PDO::PARAM_INT);

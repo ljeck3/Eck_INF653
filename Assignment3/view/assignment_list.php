@@ -27,6 +27,14 @@ include('view/header.php');
                     <input type="hidden" name="assignment_id" value="<?= $assignment['ID'] ?>">
                     <button type="submit" class="remove-button" onclick="return confirm('Are you sure you want to delete this assignment?')">X</button>
                 </form>
+
+            <!--attempt to add update button -->
+            <form action="." method="post">
+                    <input type="hidden" name="action" value="update_assignment">
+                    <input type="hidden" name="assignment_id" value="<?= $assignment['ID'] ?>">
+                    <button type="submit" class="update-button" onclick="return confirm('Are you sure you want to update this assignment?')">Edit</button>
+                </form>
+
             </div>
         <?php endforeach; ?>
     <?php else : ?>

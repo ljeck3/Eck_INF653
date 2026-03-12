@@ -250,7 +250,7 @@ button[name="action"][value="add_assignment"]:hover,
   }
 
   .assignment-item form,
-  .list__removed{
+  .list__removed .list_updated{
     justify-self: start;
   }
 
