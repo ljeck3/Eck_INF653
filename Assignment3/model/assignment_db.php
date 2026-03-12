@@ -17,7 +17,7 @@ function update_assignment($assignment_id, $description, $course_id) {
     $statement->execute();
     $statement->closeCursor();
 }
-
+//--------------------------------------------
 
 function get_assignments_by_course($course_id)
 {

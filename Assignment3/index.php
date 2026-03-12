@@ -67,7 +67,7 @@ switch ($action) {
             exit();
         }
         break;
-    //Modify the controller 
+    //Modify the controller (course)
     case "update_course":
         if ($course_id) {
             try {
@@ -81,6 +81,7 @@ switch ($action) {
             }
         }
         break;
+    //Modify the controller (assignment)
     case "update_assignment":
         if ($assignment_id) {
             update_assignment($assignment_id, $description, $course_id);
