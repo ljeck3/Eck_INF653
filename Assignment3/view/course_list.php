@@ -24,6 +24,20 @@ include("view/header.php");
                     </form>
 
                 </div>
+                <!--Trying to add edit button-->
+                <div class="list__removed">
+
+                    <form action="." method="post">
+                        <input type="hidden" name="action" value="update_course">
+                        <input type="hidden" name="course_id" value="<?= $course['courseID'] ?>">
+                        <button class="update-button" onclick="return confirm('Are you sure you want to update this course?')">X</button>
+                    </form>
+
+                </div>
+                <!------------------------->
+
+
+
             </div>
         <?php endforeach; ?>
     </section>

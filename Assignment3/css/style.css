@@ -220,7 +220,21 @@ button[name="action"][value="add_assignment"]:hover,
   font-weight: 700;
 }
 
-.remove-button:hover{
+/* Update button */
+.update-button{
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(22, 215, 41, 0.08);
+  border-color: rgba(220, 38, 38, 0.25);
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.remove-button:hover .update-button:hover{
   background: rgba(220, 38, 38, 0.14);
   border-color: rgba(220, 38, 38, 0.35);
   color: var(--danger-2);
