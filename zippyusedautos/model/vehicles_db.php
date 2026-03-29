@@ -34,3 +34,19 @@ function delete_vehicle($db, $vehicle_id) {
     $statement = $db->prepare($query);
     $statement->execute([':vehicle_id' => $vehicle_id]);
 }
+
+//add vehicle
+function add_vehicle($db, $year, $model, $price, $make_id, $type_id, $class_id) {
+    $query = 'INSERT INTO `vehicles` (`year`, `model`, `price`, `make_id`, `type_id`, `class_id`)
+            VALUES (:year, :model, :price, :make_id, :type_id, :class_id);';
+
+    $statement = $db->prepare($query);
+    $statement->execute([
+        ':year' => $year,
+        ':model' => $model,
+        ':price' => $price,
+        ':make_id' => $make_id,
+        ':type_id' => $type_id,
+        ':class_id' => $class_id
+]);
+}
