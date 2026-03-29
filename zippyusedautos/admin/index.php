@@ -15,3 +15,9 @@ include('../view/header.php');
 include('view/vehicles.php');
 
 include('../view/footer.php');
+
+$vehicle_id = $_POST['vehicle_id'];
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo($vehicle_id);
+}

@@ -27,3 +27,10 @@ function get_vehicles($db, $order) {
     
     return $vehicles;
 }
+
+//delete vehicle
+function delete_vehicle($db, $vehicle_id) {
+        $query = 'DELETE FROM vehicles WHERE vehicle_id = :vehicle_id';
+        $statement = $db->prepare($query);
+        $statement->execute([':vehicle_id' => $vehicle_id]);
+}
