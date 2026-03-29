@@ -1,10 +1,10 @@
 <?php
 
-$order = 'year';
+$order = $_GET['order']; //This value is determined by the button the user clicks from the vehicles view page
 
 //get all vehicles
-function get_vehicles($db, $order)
-{
+function get_vehicles($db, $order) {
+    //loads by year
     if ($order == 'year') {
         $query = 'SELECT year, model, price, make_name, type_name, class_name
             FROM vehicles 
@@ -12,6 +12,7 @@ function get_vehicles($db, $order)
             INNER JOIN types ON vehicles.type_id = types.type_id
             INNER JOIN classes ON vehicles.class_id = classes.class_id
             ORDER BY year DESC'; 
+    //loads by price
     } else {
         $query = 'SELECT year, model, price, make_name, type_name, class_name
             FROM vehicles 

@@ -20,6 +20,6 @@
         </tr>
     <?php endforeach; ?>
 </table>
-<button>Sort By Year</button>
-<button>Sort By Price</button>
+<button><a href="?order=price">Sort by Price</a></button>
+<button><a href="?order=year">Sort by Year</a></button>
 </section>
