@@ -20,4 +20,7 @@ include('../view/header.php');
 
 include('view/vehicles.php');
 
+//move this two a it's own page later
+include('view/add_vehicle.php');
+
 include('../view/footer.php');
