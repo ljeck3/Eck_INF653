@@ -4,11 +4,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-require_once('../model/database.php');
-require_once('../model/vehicles_db.php');
-require_once('../model/makes_db.php');
-require_once('../model/types_db.php');
-require_once('../model/classes_db.php');
+require_once('../../model/database.php');
+require_once('../../model/vehicles_db.php');
+require_once('../../model/makes_db.php');
+require_once('../../model/types_db.php');
+require_once('../../model/classes_db.php');
 
 //Calls the delete funciton if a POST was submitted.
 
@@ -59,8 +59,8 @@ $makes = get_makes($db);
 $types = get_types($db);
 $classes = get_classes($db);
 
-include('../view/header.php');
+include('../../view/header.php');
 
-include('view/types.php');
+include('../view/makes.php');
 
-include('../view/footer.php');
+include('../../view/footer.php');

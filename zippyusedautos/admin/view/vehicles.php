@@ -46,8 +46,8 @@
 
 <section>
     <h1>Manage</h1>
-    <button><a href="ctrl_add_vehicle.php">Add Vehicle</a></button>
-    <button><a href="ctrl_makes.php">Edit Makes</a></button>  
-    <button><a href="ctrl_types.php">Edit Types</a></button>  
-    <button><a href="ctrl_classes.php">Edit Classes</a></button>  
+    <button><a href="controllers/ctrl_add_vehicle.php">Add Vehicle</a></button>
+    <button><a href="controllers/ctrl_makes.php">Edit Makes</a></button>  
+    <button><a href="controllers/ctrl_types.php">Edit Types</a></button>  
+    <button><a href="controllers/ctrl_classes.php">Edit Classes</a></button>  
 </section>
