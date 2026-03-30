@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 require_once('../model/database.php');
 require_once('../model/vehicles_db.php');
 require_once('../model/makes_db.php');
+require_once('../model/types_db.php');
+require_once('../model/classes_db.php');
 
 //Calls the delete funciton if a POST was submitted.
 
@@ -27,6 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else if ($_POST['action'] == 'make') {
         $make_name = $_POST['make_name'];
         add_make($db, $make_name);
+
+    } else if ($_POST['action'] == 'type') {
+        $type_name = $_POST['type_name'];
+        add_type($db, $type_name);
+        
+    } else if ($_POST['action'] == 'class') {
+        $class_name = $_POST['class_name'];
+        add_class($db, $class_name);
     }
 }
 
@@ -34,6 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //Loads the list of vehicles. 
 $vehicles = get_vehicles($db, $order);
 $makes = get_makes($db);
+$types = get_types($db);
+$classes = get_classes($db);
 
 include('../view/header.php');
 
