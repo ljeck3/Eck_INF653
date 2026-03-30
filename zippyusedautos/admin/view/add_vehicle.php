@@ -1,4 +1,7 @@
 <section>
+    <p>Admin</p>
+</section>
+<section>
     <h1>Add Vehicle</h1>
     <form action="" method="post">
 

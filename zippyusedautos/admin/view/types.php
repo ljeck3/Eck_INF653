@@ -1,4 +1,7 @@
 <section>
+    <p>Admin</p>
+</section>
+<section>
     <h1>Types</h1>
     <table>
     <tr>

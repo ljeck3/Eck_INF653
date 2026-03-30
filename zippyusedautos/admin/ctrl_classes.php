@@ -61,6 +61,6 @@ $classes = get_classes($db);
 
 include('../view/header.php');
 
-include('view/vehicles.php');
+include('view/classes.php');
 
 include('../view/footer.php');
