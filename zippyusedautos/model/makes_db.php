@@ -15,3 +15,9 @@ function add_make($db, $make_name) {
     $statement = $db->prepare($query);
     $statement->execute([':make_name' => $make_name]);
 }
+
+function delete_make($db, $make_id) {
+    $query = 'DELETE FROM makes WHERE make_id = :make_id';
+    $statement = $db->prepare($query);
+    $statement->execute([':make_id' => $make_id]);
+}

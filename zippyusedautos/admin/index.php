@@ -37,6 +37,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else if ($_POST['action'] == 'class') {
         $class_name = $_POST['class_name'];
         add_class($db, $class_name);
+
+    } else if ($_POST['action'] == 'deleteMake') {
+        $make_id = $_POST['make_id'];
+        delete_make($db, $make_id);
+
+    } else if ($_POST['action'] == 'deleteType') {
+        $type_id = $_POST['type_id'];
+        delete_type($db, $type_id);
+
+    } else if ($_POST['action'] == 'deleteClass') {
+        $class_id = $_POST['class_id'];
+        delete_class($db, $class_id);
     }
 }
 

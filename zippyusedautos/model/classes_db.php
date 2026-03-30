@@ -15,3 +15,9 @@ function add_class($db, $class_name) {
     $statement = $db->prepare($query);
     $statement->execute([':class_name' => $class_name]);
 }
+
+function delete_class($db, $class_id) {
+    $query = 'DELETE FROM classes WHERE class_id = :class_id';
+    $statement = $db->prepare($query);
+    $statement->execute([':class_id' => $class_id]);
+}

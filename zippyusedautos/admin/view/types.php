@@ -18,7 +18,7 @@
 
     <form action="" method="post">
 
-        <label for="type_name">Type</label><br>
+        <label for="type_name">New Type</label><br>
         <input type="text" name="type_name"><br><br>
 
         <button type="submit" name="action" value="type">Add type</button>

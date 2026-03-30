@@ -18,7 +18,7 @@
 
     <form action="" method="post">
 
-        <label for="class_name">Class</label><br>
+        <label for="class_name">New Class</label><br>
         <input type="text" name="class_name"><br><br>
 
         <button type="submit" name="action" value="class">Add class</button>
