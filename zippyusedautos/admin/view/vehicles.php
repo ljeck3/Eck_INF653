@@ -31,4 +31,23 @@
     </table>
 <button><a href="?order=price">Sort by Price</a></button>
 <button><a href="?order=year">Sort by Year</a></button>
+
+<form method="get" action="">
+    <label for="filter">Filter By</label><br>
+    <select name="filter">
+        <option value="default">-- Select a filter --</option>
+        <option value="make">Make</option>
+        <option value="type">Type</option>
+        <option value="class">Class</option>
+    </select>
+    <button type="submit">Go</button>
+</form>
+</section>
+
+<section>
+    <h1>Manage</h1>
+    <button><a href="makes">Add Vehicle</a></button>
+    <button><a href="makes">Edit Makes</a></button>  
+    <button><a href="types">Edit Types</a></button>  
+    <button><a href="classes">Edit Classes</a></button>  
 </section>
