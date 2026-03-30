@@ -1,6 +1,6 @@
 <?php
 
-$order = $_GET['order']; //This value is determined by the button the user clicks from the vehicles view page
+$order = isset($_GET['order']) ? $_GET['order'] : 'price';
 
 //get all vehicles
 function get_vehicles($db, $order) {
