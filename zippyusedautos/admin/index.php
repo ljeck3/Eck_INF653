@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 //Loads the list of vehicles. 
-$vehicles = get_vehicles($db, $order);
+$vehicles = get_vehicles($db, $order, $filter);
 $makes = get_makes($db);
 $types = get_types($db);
 $classes = get_classes($db);

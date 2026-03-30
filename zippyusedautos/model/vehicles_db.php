@@ -1,9 +1,10 @@
 <?php
 
 $order = isset($_GET['order']) ? $_GET['order'] : 'price';
+$filter = isset($_GET['filter']) ? $_GET['filter'] : 'default';
 
 //get all vehicles
-function get_vehicles($db, $order) {
+function get_vehicles($db, $order, $filter) {
     //loads by year
     if ($order == 'year') {
         $query = 'SELECT year, model, price, make_name, type_name, class_name, vehicle_id

@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 require_once('model/database.php');
 require_once('model/vehicles_db.php');
 
-$vehicles = get_vehicles($db, $order);
+$vehicles = get_vehicles($db, $order, $filter);
 
 
 include('view/header.php');
