@@ -1,9 +1,20 @@
 <section>
     <h1>Classes</h1>
-
+    <table>
+    <tr>
+        <th></th>
+    </tr>
     <?php foreach($classes as $class): ?>
-        <p><?= $class['class_name'] ?></p>
+        <tr>
+            <td><?= $class['class_name'] ?></td>
+            <td>
+                <form action="" method="post">
+                    <input type="hidden" name="class_id" value="<?= $class['class_id'] ?>">
+                    <button type="submit" name="action" value="deleteClass">Delete</button>
+                </form>
+        </tr>
     <?php endforeach; ?>
+    </table>
 
     <form action="" method="post">
 
